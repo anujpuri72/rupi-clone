@@ -1,0 +1,13 @@
+.phoneInputContainer {
+  background: #192231;
+  border: 1px solid #fdef78;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.phoneInput {
+  background: #192231 !important;
+  color: #fdef78 !important;
+  padding: 8px 18px 16px;
+  font-weight: 500;
+}

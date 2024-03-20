@@ -1,0 +1,23 @@
+.navbar {
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  min-height: 60px;
+  z-index: 15;
+  background-color: transparent;
+  top: 0;
+}
+
+.applyButton {
+  display: flex;
+  align-items: center;
+  height: fit-content;
+  cursor: pointer;
+}
