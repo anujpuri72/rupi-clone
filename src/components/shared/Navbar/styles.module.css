@@ -13,6 +13,7 @@
   z-index: 15;
   background-color: transparent;
   top: 0;
+  padding-top: 10;
 }
 
 .applyButton {
