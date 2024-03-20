@@ -1,0 +1,9 @@
+.uniGradientPrimary {
+  background-image: linear-gradient(90deg, #8fffef 25%, #f9f490);
+  background: linear-gradient(90deg, #8fffef 25%, #f9f490);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}

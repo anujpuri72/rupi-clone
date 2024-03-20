@@ -5,6 +5,8 @@ import Footer from "../shared/Footer";
 import Hero from "./Hero";
 import Features from "./Features";
 import FloatingFooter from "./FloatingFooter";
+import Perks from "./Perks";
+import Advantages from "./Advantages";
 
 const HomePageComp = () => {
   return (
@@ -12,6 +14,8 @@ const HomePageComp = () => {
       <Navbar />
       <Hero />
       <Features />
+      <Perks />
+      <Advantages />
       <Footer />
       <FloatingFooter />
     </div>
