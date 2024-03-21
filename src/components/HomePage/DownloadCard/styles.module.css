@@ -1,0 +1,16 @@
+.background {
+  background-image: linear-gradient(158deg, #5ad6c4, #fdef78);
+}
+
+.icon {
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  line-height: 1em;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  color: currentColor;
+  vertical-align: middle;
+  margin-right: 8px;
+}

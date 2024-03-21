@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import clsx from "clsx";
 import { motion, AnimatePresence } from "framer-motion";
+import { usePageContext } from "../../../Screens/HomePage/context";
 
 import styles from "./styles.module.css";
 
 const FloatingFooter = () => {
-  const [inputProps, setInputProps] = useState({ checked: true, number: "" });
+  const { inputProps, setInputProps, setVisiblePercentage } = usePageContext();
   const [visible, setVisible] = useState(false);
 
   return (
@@ -78,8 +79,8 @@ const FloatingFooter = () => {
                               fill="none"
                               xmlns="http://www.w3.org/2000/svg">
                               <path
-                                fill-rule="evenodd"
-                                clip-rule="evenodd"
+                                filRule="evenodd"
+                                clipRule="evenodd"
                                 d="M19.668.332a1.132 1.132 0 0 1 0 1.6L8.504 13.098a1.887 1.887 0 0 1-2.668 0L.332 7.593a1.132 1.132 0 0 1 1.6-1.601l5.238 5.237L18.067.332a1.132 1.132 0 0 1 1.601 0Z"
                                 fill="#79E691"></path>
                             </svg>
@@ -123,7 +124,7 @@ const FloatingFooter = () => {
                 }
               />
               <label
-                for="consent-msg"
+                htmlFor="consent-msg"
                 className="consent text-white md:text-black text-[10px] leading-3 cursor-pointer">
                 You agree to be contacted by Uni Cards over Call, SMS, Email or
                 WhatsApp to guide you through your application.

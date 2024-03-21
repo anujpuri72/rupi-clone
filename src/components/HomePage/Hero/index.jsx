@@ -1,13 +1,24 @@
 import React from "react";
-import { useState } from "react";
+import { useRef, useEffect } from "react";
 
 import styles from "./styles.module.css";
 
+import { usePageContext } from "../../../Screens/HomePage/context";
+import { useInView } from "react-intersection-observer";
+
 const Hero = () => {
-  const [inputProps, setInputProps] = useState({ checked: false, number: "" });
+  const { inputProps, setInputProps, setHeroVisible } = usePageContext();
+  const { ref, inView, entry } = useInView({
+    /* Optional options */
+    threshold: 0,
+  });
+
+  useEffect(() => {
+    setHeroVisible(inView);
+  }, [inView]);
 
   return (
-    <div>
+    <div ref={ref}>
       <div className="relative h-[100vh] w-full flex items-center justify-center">
         <div className="flex flex-col md:flex-row-reverse mx-auto max-w-[1280px] w-full justify-center z-1 bg-transparent">
           <img
@@ -34,7 +45,7 @@ const Hero = () => {
                   <path
                     d="m6 0 1.273 4.727L12 6 7.273 7.273 6 12 4.727 7.273 0 6l4.727-1.273L6 0Z"
                     fill="#000"
-                    style={{ "mix-blend-mode": "darken" }}></path>
+                    style={{ mixBlendMode: "darken" }}></path>
                 </svg>
                 5x Rewards
                 <svg
@@ -46,7 +57,7 @@ const Hero = () => {
                   <path
                     d="m6 0 1.273 4.727L12 6 7.273 7.273 6 12 4.727 7.273 0 6l4.727-1.273L6 0Z"
                     fill="#000"
-                    style={{ "mix-blend-mode": "darken" }}></path>
+                    style={{ mixBlendMode: "darken" }}></path>
                 </svg>
                 Zero Forex Markup
               </p>
@@ -98,8 +109,8 @@ const Hero = () => {
                                   fill="none"
                                   xmlns="http://www.w3.org/2000/svg">
                                   <path
-                                    fill-rule="evenodd"
-                                    clip-rule="evenodd"
+                                    fillRule="evenodd"
+                                    clipRule="evenodd"
                                     d="M19.668.332a1.132 1.132 0 0 1 0 1.6L8.504 13.098a1.887 1.887 0 0 1-2.668 0L.332 7.593a1.132 1.132 0 0 1 1.6-1.601l5.238 5.237L18.067.332a1.132 1.132 0 0 1 1.601 0Z"
                                     fill="#79E691"></path>
                                 </svg>
@@ -135,7 +146,7 @@ const Hero = () => {
                       }
                     />
                     <label
-                      for="consent-msg"
+                      htmlFor="consent-msg"
                       className="consent text-white md:text-black text-[10px] leading-3 cursor-pointer">
                       You agree to be contacted by Uni Cards over Call, SMS,
                       Email or WhatsApp to guide you through your application.
